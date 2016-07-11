@@ -1,10 +1,47 @@
 body {
-  background-color: #f1f2f6;
+  background-color: #ecf0f5;
 }
 .card {
-  margin-left: 10px;
-  margin-right: 10px;
+  display: block;
+  min-height: 90px;
+  background: #fff;
   width: 100%;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  border-radius: 2px;
+  margin-bottom: 15px;
+}
+.card .icon {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  display: block;
+  float: left;
+  height: 90px;
+  width: 90px;
+  text-align: center;
+  font-size: 45px;
+  line-height: 90px;
+  background: rgba(0,0,0,0.2);
+}
+.icon span {
+  line-height: inherit;
+}
+.card .infobox {
+  padding: 5px 10px;
+  margin-left: 90px;
+}
+.card .infobox .info {
+  display: block;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card .infobox .sub-info {
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
 }
 .title-page {
   margin: 0px;
@@ -22,14 +59,44 @@ body {
 .copyright {
   margin: 5px;
 }
-
+.box {
+  position: relative;
+  border-radius: 3px;
+  background: #ffffff;
+  border-top: 3px solid #d2d6de;
+  margin-bottom: 20px;
+  width: 100%;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+.box .box-header {
+  display: inline-block;
+  font-size: 18px;
+  color: #444;
+  display: block;
+  padding: 10px;
+  position: relative;
+  border-bottom: 1px solid #f4f4f4;
+}
+.box .list-group {
+  margin-bottom: 0px;
+}
+.box .box-footer {
+  display: inline-block;
+  color: #444;
+  display: block;
+  padding: 10px;
+  position: relative;
+  border-top: 1px solid #f4f4f4;
+}
 .left-sidenav {
   color: #b5b5b5;
+  float: left;
   width: 240px;
   background-color: rgb(44, 40, 59);
-  min-height: 100vw;
+  height: 100vh;
   margin-right: 0px;
-  float: left;
+  position: fixed;
+  overflow-y: auto;
 }
 .left-sidenav ul {
   padding: 0px;
@@ -68,7 +135,8 @@ body {
 .left-sidenav ul li a:hover {
   background-color: rgb(57, 51, 78);
 }
+
 .body-content {
+  width: auto;
   margin-left: 240px;
-  padding-left: 10px;
 }

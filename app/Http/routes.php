@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('home', function ()    {
+      return View::make('admin.home');
+    });
+    Route::get('login', function ()    {
+      return View::make('admin.login');
+    });
+});
