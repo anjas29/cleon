@@ -1,5 +1,103 @@
+/*color swatch*/
+/*BLUE JEANS
+#5D9CEC, #4A89DC
+AQUA
+#4FC1E9, #3BAFDA
+MINT
+#48CFAD, #37BC9B
+GRASS
+#A0D468, #8CC152
+SUNFLOWER
+#FFCE54, #F6BB42
+BITTERSWEET
+#FC6E51, #E9573F
+GRAPEFRUIT
+#ED5565, #DA4453
+LAVENDER
+#AC92EC, #967ADC
+PINK ROSE
+#EC87C0, #D770AD
+LIGHT GRAY
+#F5F7FA, #E6E9ED
+MEDIUM GRAY
+#CCD1D9, #AAB2BD
+DARK GRAY
+#656D78, #434A54*/
+.blue-jeans {
+  background-color: #5D9CEC !important;
+  color: #fff;
+}
+.blue-jeans-dark {
+  background-color: #4A89DC !important;
+  color: #fff;
+}
+.aqua {
+  background-color: #4FC1E9 !important;
+  color: #fff;
+}
+.aqua-dark {
+  background-color: #3BAFDA !important;
+  color: #fff;
+}
+.mint {
+  background-color: #48CFAD !important;
+  color: #fff;
+}
+.mint-dark {
+  background-color: #37BC9B !important;
+  color: #fff;
+}
+.grass {
+  background-color: #A0D468 !important;
+  color: #fff;
+}
+.grass-dark {
+  background-color: #8CC152 !important;
+  color: #fff;
+}
+.sunflower {
+  background-color: #FFCE54 !important;
+  color: #fff;
+}
+.sunflower-dark {
+  background-color: #F6BB42 !important;
+  color: #fff;
+}
+.bittersweet {
+    background-color: #FC6E51 !important;
+    color: #fff;
+}
+.bittersweet-dark {
+    background-color: #E9573F !important;
+    color: #fff;
+}
 body {
   background-color: #ecf0f5;
+  font-family: 'Open Sans', sans-serif;
+}
+/*mulai profil*/
+.profil {
+  height: 65px;
+  padding: 10px;
+
+  margin-bottom: 10px;
+  border-bottom: 1px solid #b6b6b6;
+}
+.profil img {
+  height: 45px;
+  margin-right: 5px;
+}
+.profil a {
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  color: rgb(71, 71, 71);
+  line-height: 45px;
+}
+.profil .btn-menu-toogle {
+  font-size: 30px;
+  line-height: 60px;
+  display: inline-block;
 }
 .card {
   display: block;
@@ -45,7 +143,7 @@ body {
 }
 .title-page {
   margin: 0px;
-  padding: 10px;
+  padding: 10px 0px;
 }
 .form-login {
   background-color: #fff;
@@ -59,6 +157,7 @@ body {
 .copyright {
   margin: 5px;
 }
+
 .box {
   position: relative;
   border-radius: 3px;
@@ -77,6 +176,10 @@ body {
   position: relative;
   border-bottom: 1px solid #f4f4f4;
 }
+.box .box-header img {
+  height: 50px;
+  margin: auto;
+}
 .box .list-group {
   margin-bottom: 0px;
 }
@@ -88,6 +191,32 @@ body {
   position: relative;
   border-top: 1px solid #f4f4f4;
 }
+/*box color*/
+.box-blue-jeans {
+  border-color: #5D9CEC
+}
+.box-blue-jeans-light {
+  border-color: #5D9CEC
+}
+.box-sunflower {
+  border-color: #FFCE54
+}
+.box-grass {
+  border-color: #A0D468;
+}
+
+.box-sunflower-light {
+  border-color: #F6BB42;
+}
+.box-mint {
+  border-color: #48CFAD !important;
+}
+.box-mint-dark {
+  border-color: #37BC9B !important;
+}
+/*end box color*/
+
+/*side nav*/
 .left-sidenav {
   color: #b5b5b5;
   float: left;
