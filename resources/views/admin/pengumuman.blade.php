@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="title-page">
-      <a href="{{ URL::route('pengumumanpost') }}" aria-label="Left Align" class="btn btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Pengumuman Baru</a>
+      <a href="{{ URL::route('adminpostpengumuman') }}" aria-label="Left Align" class="btn btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Pengumuman Baru</a>
     </div>
     <div class="box box-sunflower">
       <table class="table table-hover">

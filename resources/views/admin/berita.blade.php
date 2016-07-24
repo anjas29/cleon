@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="title-page">
-      <a href="{{ URL::route('beritapost')}}" aria-label="Left Align" class="btn btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Post Baru</a>
+      <a href="{{ URL::route('adminberitapost')}}" aria-label="Left Align" class="btn btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Post Baru</a>
     </div>
     <div class="box box-blue-jeans">
       <table class="table table-hover">

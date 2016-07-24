@@ -28,6 +28,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin'], function () {
       return View::make('admin.pengumuman');
     })->name('pengumuman');
 
+    Route::get('header', function ()    {
+      return View::make('admin.header');
+    })->name('header');
+
     Route::get('tos', function ()    {
       return View::make('admin.tos');
     })->name('tos');
@@ -35,6 +39,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin'], function () {
     Route::get('kantor', function ()    {
       return View::make('admin.kantor');
     })->name('kantor');
+
+    Route::get('user', function ()    {
+      return View::make('admin.user');
+    })->name('user');
 
     Route::get('faq', function ()    {
       return View::make('admin.faq');
@@ -49,6 +57,17 @@ Route::group(['prefix' => 'admin', 'as' => 'admin'], function () {
       return View::make('admin.postberita');
     })->name('beritapost');
 
+    Route::get('product/timebased', function ()    {
+      return View::make('admin.timebased');
+    })->name('time');
+
+    Route::get('product/volumebased', function ()    {
+      return View::make('admin.volumebased');
+    })->name('volume');
+
+    Route::get('product/unlimited', function ()    {
+      return View::make('admin.unlimited');
+    })->name('unlimit');
 
     Route::get('login', function ()    {
       return View::make('admin.login');

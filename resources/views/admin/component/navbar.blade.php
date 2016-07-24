@@ -13,16 +13,16 @@
         <ul class="collapse sembunyi" id="postDrop">
           <li><a href="{{ URL::route('adminberita') }}"><span class="glyphicon glyphicon-th-list"></span> Berita</a></li>
           <li><a href="{{URL::route('adminpengumuman')}}"><span class="glyphicon glyphicon-bullhorn"></span> Pengumuman</a></li>
-          <li><a href="{{ 'kas' }}"><span class="glyphicon glyphicon-picture"></span> Header</a></li>
+          <li><a href="{{ URL::route('adminheader') }}"><span class="glyphicon glyphicon-picture"></span> Header</a></li>
         </ul>
       </li>
       {{-- Product Menu --}}
       <li>
         <a role="button" data-toggle="collapse" href="#paketDrop" aria-expanded="false" aria-controls="paketDrop"><span class="glyphicon glyphicon-globe"></span> Product</a>
         <ul class="collapse sembunyi" id="paketDrop">
-          <li><a href="#"><span class="fa fa-clock-o"></span>Time Based</a></li>
-          <li><a href="#"><span class="fa fa-flask"></span>Volume Based</a></li>
-          <li><a href="#"><span class="fa fa-cloud"></span>Unlimited</a></li>
+          <li><a href="{{ URL::route('admintime') }}"><span class="fa fa-clock-o"></span>Time Based</a></li>
+          <li><a href="{{ URL::route('adminvolume') }}"><span class="fa fa-flask"></span>Volume Based</a></li>
+          <li><a href="{{ URL::route('adminunlimit') }}"><span class="fa fa-cloud"></span>Unlimited</a></li>
         </ul>
       </li>
 
@@ -32,7 +32,7 @@
       <li><a href="{{URL::route('adminfaq')}}"><span class="glyphicon glyphicon-question-sign"></span> FAQ</a></li>
 
       {{-- System Setting Menu --}}
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Manajemen User</a></li>
-      <li><a href="#"><span class="fa fa-building-o"></span> Manajemen Profil Kantor</a></li>
+      <li><a href="{{URL::route('adminuser')}}"><span class="glyphicon glyphicon-user"></span> Manajemen User</a></li>
+      <li><a href="{{URL::route('adminkantor')}}"><span class="fa fa-building-o"></span> Manajemen Profil Kantor</a></li>
     </ul>
 </nav>

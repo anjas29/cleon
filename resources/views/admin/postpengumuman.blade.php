@@ -30,6 +30,14 @@
                 <label for="title">Isi Berita:</label><br>
                 <textarea class="form-control" name="isi" rows="8" cols="40"></textarea>
               </div>
+              <div class="form-group">
+                <select class="form-control">
+                  <option>Informasi</option>
+                  <option>Penting</option>
+                  <option>Peringatan</option>
+                  <option>Promo</option>
+                </select>
+              </div>
               <input type="submit" class="btn btn-warning" value="Post Pengumuman">
             </form>
           </div>
