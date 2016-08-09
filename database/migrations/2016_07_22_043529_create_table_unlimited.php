@@ -14,6 +14,8 @@ class CreateTableUnlimited extends Migration
     {
         Schema::create('unlimited', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('fub');
+            $table->string('ds');
             $table->timestamps();
         });
     }

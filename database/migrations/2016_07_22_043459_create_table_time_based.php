@@ -14,6 +14,8 @@ class CreateTableTimeBased extends Migration
     {
         Schema::create('time_based', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('masa_aktif');
+            $table->string('quota');
             $table->timestamps();
         });
     }

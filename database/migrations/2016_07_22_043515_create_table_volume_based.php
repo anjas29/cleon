@@ -14,6 +14,8 @@ class CreateTableVolumeBased extends Migration
     {
         Schema::create('volume_based', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('masa_aktif');
+            $table->string('quota');
             $table->timestamps();
         });
     }
