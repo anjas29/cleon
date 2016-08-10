@@ -5,7 +5,6 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="{{URL::asset('css/bootstrap.min.css')}}" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="{{URL::asset('css/bootflat.min.css')}}" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="{{URL::asset('css/buatansendiri.css')}}" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
     <link href="//cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css" rel="stylesheet">
     @stack('css')

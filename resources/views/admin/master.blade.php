@@ -1,5 +1,9 @@
 @extends('master')
 
+@push('css')
+  <link rel="stylesheet" href="{{URL::asset('css/buatansendiri.css')}}" media="screen" title="no title" charset="utf-8">
+@endpush
+
 @section('title', 'Beranda Admin')
 
 @section('content')

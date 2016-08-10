@@ -1,0 +1,137 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+.blue-jeans {
+  background-color: #5D9CEC !important;
+  color: #fff;
+}
+.blue-jeans-dark {
+  background-color: #4A89DC !important;
+  color: #fff;
+}
+.aqua {
+  background-color: #4FC1E9 !important;
+  color: #fff;
+}
+.aqua-dark {
+  background-color: #3BAFDA !important;
+  color: #fff;
+}
+.mint {
+  background-color: #48CFAD !important;
+  color: #fff;
+}
+.mint-dark {
+  background-color: #37BC9B !important;
+  color: #fff;
+}
+.grass {
+  background-color: #A0D468 !important;
+  color: #fff;
+}
+.grass-dark {
+  background-color: #8CC152 !important;
+  color: #fff;
+}
+.sunflower {
+  background-color: #FFCE54 !important;
+  color: #fff;
+}
+.sunflower-dark {
+  background-color: #F6BB42 !important;
+  color: #fff;
+}
+.bittersweet {
+    background-color: #FC6E51 !important;
+    color: #fff;
+}
+.bittersweet-dark {
+    background-color: #E9573F !important;
+    color: #fff;
+}
+
+.navbar-brand {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.navbar-brand img {
+  height: 40px;
+}
+
+.navbar {
+  box-shadow: 0px 2px 3px rgba(107, 106, 106, 0.49);
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+.collation {
+  padding-top: 10px;
+}
+.collation .left {
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  float: left;
+  width: 150px;
+}
+.collation .right {
+  padding-left: 200px;
+}
+.collation .title {
+  display: block;
+  font-size: 20pt;
+  line-height: 1.2em;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.collation p {
+  font-size: 14pt;
+  line-height: 1.5em;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    height: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .nav li a {
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: 0.2s ease;
+    border-radius: 3px;
+  }
+  .nav li a:hover {
+    background-color: #FFCE54;
+    color: #fff;
+  }
+}
+
+.blog-post {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.blog-post .date {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  margin-bottom: 20px;
+  color: rgb(75, 75, 75);
+}
+.blog-post .title{
+  font-size: 28px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.blog-post .content{
+  line-height: 1.5em;
+  font-size: 11pt;
+}
+footer.container-fluid {
+  margin-top: 50px;
+}
+footer {
+  background-color: #ffa04a;
+  color: #fff;
+}

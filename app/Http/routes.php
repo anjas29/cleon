@@ -12,8 +12,32 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('berita', function () {
+    return view('berita');
+});
+
+Route::get('tos', function () {
+    return view('tos');
+});
+
+Route::get('product', function () {
+    return view('product');
+});
+
+Route::get('faq', function () {
+    return view('FAQ');
+});
+
+Route::get('berita', function () {
+    return view('berita');
+});
+
+Route::get('post', function () {
+    return view('post');
+})->name('post');
 
 Route::group(['prefix' => 'admin', 'as' => 'admin'], function () {
     Route::get('home', function ()    {
