@@ -81,6 +81,13 @@ Route::group(['prefix' => 'admin', 'as' => 'admin'], function () {
       return View::make('admin.postberita');
     })->name('beritapost');
 
+    Route::get('berita/edit', function ()    {
+      return View::make('admin.editberita');
+    })->name('beritaedit');
+
+    Route::post('berita/post', function ()    {
+    })->name('kirim');
+
     Route::get('product/timebased', function ()    {
       return View::make('admin.timebased');
     })->name('time');

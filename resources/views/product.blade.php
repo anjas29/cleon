@@ -5,6 +5,11 @@
 @push('css')
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}" media="screen" charset="utf-8">
+  <style media="screen">
+    #desc {
+      margin: 20px 0px;
+    }
+  </style>
 @endpush
 
 @section('content')
@@ -13,6 +18,13 @@
 
   <div class="container">
     <h3>Produk</h3>
+    <div class="row">
+      <div class="col-xs-12">
+        <p id="desc">
+          "Cleon" Internet Access merupakan salah satu produk dari Jogja Medianet yang melayani para pengguna internet personal yang tidak terikat dengan biaya bulanan dan perangkat yang mahal. "Cleon" dapat dipasang di Hotel, Cafe, Guest House, Kost, Angkringan dan tempat yang membutuhkan Internet yang lainnya.
+        </p>
+      </div>
+    </div>
     <div class="row">
       <div class="col-md-6">
         <div class="panel">

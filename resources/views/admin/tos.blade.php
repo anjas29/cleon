@@ -55,19 +55,11 @@
       $('#formedit').hide('slow');
     });
 
-    $(document).ready(function() {
-        $('#summernote').summernote({
-          toolbar: [
-            // [groupName, [list of button]]
-            ['style', ['bold', 'italic', 'underline', 'clear']],
-            ['font', ['strikethrough', 'superscript', 'subscript']],
-            ['fontsize', ['fontsize']],
-            ['color', ['color']],
-            ['para', ['ul', 'ol', 'paragraph']],
-            ['height', ['height']],
-          ],
-          height: 200
-        });
+  </script>
+  <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+  <script>
+    tinymce.init({
+      selector:'textarea'
     });
   </script>
 @endpush

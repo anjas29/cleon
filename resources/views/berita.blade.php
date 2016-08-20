@@ -12,9 +12,10 @@
   @include('component.navbar')
 
   <div class="container">
+    <h3>Berita Terbaru CLEON</h3>
     @for($i=0; $i < 5; $i++)
       <div class="blog-post">
-        <h3 class="title">Bintang Muhammad</h3>
+        <h4 class="title">Bintang Muhammad</h4>
         <span class="date"><i class="fa fa-calendar-o"></i> 27 Agustus 2016</span>
         <div class="content">
           <p>

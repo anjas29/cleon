@@ -49,28 +49,7 @@
               <div class="btn-group" role="group" aria-label="...">
                 <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-eye-open"></span></button>
                 <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span></button>
-                <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              1
-            </td>
-            <td>
-              Ipssum
-            </td>
-            <td>
-              Admin2
-            </td>
-            <td>
-              12 Sept 2016
-            </td>
-            <td>
-              <div class="btn-group" role="group" aria-label="...">
-                <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-eye-open"></span></button>
-                <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span></button>
-                <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+                <button type="button" class="btn btn-danger delete" data-id="1"><span class="glyphicon glyphicon-trash"></span></button>
               </div>
             </td>
           </tr>
@@ -97,4 +76,33 @@
       </ul>
     </nav>
   </div>
+
+  <div class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <strong>Konfirmasi</strong><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+      </div>
+      <div class="modal-body">
+          Apakah anda yakin menghapus berita id-<span id="id"></span>?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-dismiss="modal">Tidak</button>
+        <button type="button" class="btn btn-danger">Ya</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 @endsection
+
+@push('javascript')
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.delete').click(function() {
+        var data = $(this).data('id');
+        $('#id').text(data)
+        $('.modal').modal();
+      });
+    });
+  </script>
+@endpush

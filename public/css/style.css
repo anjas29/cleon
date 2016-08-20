@@ -1,3 +1,20 @@
+@keyframes go-in {
+  0% {bottom: -50px;}
+  100% {bottom: 30px;}
+}
+@keyframes go-out {
+  100% {bottom: -50px;}
+  0% {bottom: 30px;}
+}
+
+.animate-in {
+  animation: go-in 0.2s;
+  animation-fill-mode: forwards;
+}
+.animate-out {
+  animation: go-out 0.2s;
+  animation-fill-mode: forwards;
+}
 * {
   font-family: 'Open Sans', sans-serif;
 }
@@ -85,10 +102,29 @@
   margin-bottom: 20px;
 }
 .collation p {
-  font-size: 14pt;
+  font-size: 11pt;
   line-height: 1.5em;
 }
 
+
+.circle-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: block;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  padding: 12.5px;
+  border-radius: 50%;
+  line-height: 50px;
+  font-size: 25px;
+  color: #fff;
+  box-shadow: 1px 3px 5px rgb(153, 153, 153);
+}
+.circle-btn:hover {
+  color: #fff;
+}
 @media screen and (min-width: 768px) {
   .navbar {
     height: 70px;
@@ -119,7 +155,7 @@
   color: rgb(75, 75, 75);
 }
 .blog-post .title{
-  font-size: 28px;
+  font-size: 16pt;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -128,10 +164,43 @@
   line-height: 1.5em;
   font-size: 11pt;
 }
-footer.container-fluid {
-  margin-top: 50px;
-}
+
 footer {
-  background-color: #ffa04a;
+  background-color: #fa7636;
   color: #fff;
+  margin-top: 50px;
+  padding-top: 20px;
+  font-size: 11pt;
+  line-height: 1.25em;
 }
+
+footer p {
+  line-height: 1.5em;
+}
+
+footer strong {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+footer h5 {
+  margin-bottom: 30px;
+  font-weight: 100;
+  font-size: 24px;
+}
+footer .footer-last {
+  background-color: #d65e23;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+ul.phonelist {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+ }
+
+ ul.phonelist li {
+  line-height: 1.5em;
+ }

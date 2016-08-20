@@ -4,9 +4,6 @@
   Post Berita
 @endsection
 
-@push('css')
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css" rel="stylesheet">
-@endpush
 
 @section('content-wrapper')
   <div class="container-fluid">
@@ -25,14 +22,16 @@
             Post
           </div>
           <div class="container-fluid">
-            <form class="" action="index.html" method="post">
+
+            <form class="" action="http://localhost/cleon/public/admin/berita/post" method="post">
+               <input type="hidden" name="_token" value="{{ csrf_token() }}">
               <div class="form-group">
                 <label for="title">Judul:</label>
                 <input class="form-control" type="text" id="judul" name="judul" placeholder="judul">
               </div>
               <div class="form-group">
                 <label for="title">Isi Berita:</label><br>
-                <div id="summernote"></div>
+                <textarea name="isi" rows="10" cols="40"></textarea>
               </div>
               <input type="submit" class="btn btn-info" value="Post Berita">
             </form>
@@ -44,21 +43,10 @@
 @endsection
 
 @push('javascript')
-  <script src="{{URL::asset('js/summernote.min.js')}}" charset="utf-8"></script>
+  <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
   <script>
-    $(document).ready(function() {
-        $('#summernote').summernote({
-          toolbar: [
-            // [groupName, [list of button]]
-            ['style', ['bold', 'italic', 'underline', 'clear']],
-            ['font', ['strikethrough', 'superscript', 'subscript']],
-            ['fontsize', ['fontsize']],
-            ['color', ['color']],
-            ['para', ['ul', 'ol', 'paragraph']],
-            ['height', ['height']],
-          ],
-          height: 200
-        });
+    tinymce.init({
+      selector:'textarea'
     });
   </script>
 @endpush

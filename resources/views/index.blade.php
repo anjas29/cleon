@@ -16,10 +16,7 @@
   <div class="container">
     <div class="row">
       <img src="{{ URL::asset('img/header.jpg') }}" class="img-responsive" alt="" />
-      <div class="alert alert-warning sunflower-dark" role="alert"><strong>UPDATE PAKET 5K dari 2 Jam menjadi 3 Jam</strong>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+
       </div>
     </div>
   </div>
@@ -96,6 +93,24 @@
     </div>
   </div>
 
+  {{-- Buton Flying --}}
+  <a id="fling" class="circle-btn aqua-dark" data-toggle="modal" data-target="#pengumuman" data-placement="top" title="Pengumuman"><i class="fa fa-bell"></i></a>
+  {{--  Modal Pengumuman --}}
+  <div class="modal fade" id="pengumuman" tabindex="-1" role="dialog" aria-labelledby="pengumuman">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Pengumuman</h4>
+        </div>
+        <div class="modal-body">
+          UPDATE PAKET 5K dari 2 Jam menjadi 3 Jam
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
   {{-- footer --}}
   @include('component.footer')
 
@@ -103,13 +118,18 @@
 
 @push('javascript')
   <script type="text/javascript">
-  $(window).on('scroll', function() {
-      var y_scroll_pos = window.pageYOffset;
-      var scroll_pos_test = 200;             // set to whatever you want it to be
-
-      if(y_scroll_pos > $('#first').offset().top) {
-          $('#first').html('<hq>Slow</h1>');
-      }
+    $(document).ready(function() {
+      $('#fling').addClass('animate-out');
+      $('#pengumuman').modal();
+      $('.modal').on('show.bs.modal', function (e) {
+        $('#fling').removeClass('animate-in');
+        $('#fling').addClass('animate-out');
+      });
+      $('.modal').on('hide.bs.modal', function (e) {
+        $('#fling').removeClass('animate-out');
+        $('#fling').addClass('animate-in');
+      });
+      $('#fling').tooltip();
     });
   </script>
 @endpush
