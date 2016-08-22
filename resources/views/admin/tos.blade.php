@@ -41,13 +41,15 @@
 @endsection
 
 @push('javascript')
-  <script src="{{URL::asset('js/summernote.min.js')}}" charset="utf-8"></script>
   <script>
     $('#edit').click(function() {
         $('.articleBody').slideUp('fast');
         $('#formtext').val($('.articleBody').html());
         $('#edit').hide('slow');
         $('#formedit').show('slow');
+        tinymce.init({
+          selector:'textarea'
+        });
     });
     $('#cancel').click(function() {
       $('.articleBody').show('fast');
@@ -57,9 +59,5 @@
 
   </script>
   <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-  <script>
-    tinymce.init({
-      selector:'textarea'
-    });
-  </script>
+
 @endpush

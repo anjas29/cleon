@@ -32,7 +32,7 @@
               <div class="btn-group" role="group" aria-label="...">
                 <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-eye-open"></span></button>
                 <button type="button" id="btn-edit" data-id="" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span></button>
-                <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+                <button type="button" data-id="1" class="delete btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
               </div>
             </td>
           </tr>
@@ -80,11 +80,34 @@
     </div>
   </div>
 
+  {{--  Modal Konfirmasi Penghapusan --}}
+  <div class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <strong>Konfirmasi Penghapusan FAQ</strong><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+        </div>
+        <div class="modal-body">
+            Apakah anda yakin menghapus pertanyaan id-<span id="id"></span>?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info" data-dismiss="modal">Tidak</button>
+          <button type="button" class="btn btn-danger">Ya</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 @endsection
 
 @push('javascript')
-  <script src="{{URL::asset('js/summernote.min.js')}}" charset="utf-8"></script>
+  <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+  <script>
+    tinymce.init({
+      selector:'textarea'
+    });
+  </script>
   <script>
     $('#buatfaq').hide();
     $('#editfaq').hide();
@@ -97,18 +120,11 @@
       $('#editfaq').slideDown('slow');
     });
     $(document).ready(function() {
-        $('#summernote').summernote({
-          toolbar: [
-            // [groupName, [list of button]]
-            ['style', ['bold', 'italic', 'underline', 'clear']],
-            ['font', ['strikethrough', 'superscript', 'subscript']],
-            ['fontsize', ['fontsize']],
-            ['color', ['color']],
-            ['para', ['ul', 'ol', 'paragraph']],
-            ['height', ['height']],
-          ],
-          height: 200
-        });
+      $('.delete').click(function() {
+        var id = $(this).data('id');
+        $('#id').text(id);
+        $('.modal').modal();
+      });
     });
   </script>
 @endpush

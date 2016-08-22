@@ -165,6 +165,7 @@ body {
   margin: 5px;
   overflow: hidden;
   position: relative;
+  transition: 0.2s;
 }
 .thumb--square img {
   height: 100%;
@@ -177,6 +178,16 @@ body {
   padding: 5px 5px;
   background-color: #37BC9B;
   color: #fff;
+}
+.thumb--square .delete  {
+  display: none;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  transition: 1s ease;
+}
+.thumb--square:hover > .delete {
+  display: block;
 }
 .box {
   position: relative;

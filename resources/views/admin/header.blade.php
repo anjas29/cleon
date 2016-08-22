@@ -1,4 +1,4 @@
-@extends('admin.master')
+  @extends('admin.master')
 
 @section('title')
   Header Halaman Utama
@@ -6,32 +6,21 @@
 
 @section('content-wrapper')
   <div class="container-fluid">
-      <div class="box">
+      <div class="box box-mint">
         <div class="box-header">
           <b>Header yang tampil sekarang : </b>
         </div>
-
+`
           {{-- Gallery --}}
+          @for($i=1; $i < 10; $i++)
             <div class="thumb--square">
               <img src="{{ URL::asset('img/header.jpg') }}">
               <span>Gambar</span>
+              <a href="#" data-id="{{ $i }}" class="delete btn-danger btn left" ><i class="fa fa-trash-o"></i></a>`
             </div>
-            <div class="thumb--square">
-              <img src="{{ URL::asset('img/header.jpg') }}">
-              <span>Gambar</span>
-            </div>
-            <div class="thumb--square">
-              <img src="{{ URL::asset('img/header.jpg') }}">
-              <span>Gambar</span>
-            </div>
-            <div class="thumb--square">
-              <img src="{{ URL::asset('img/header.jpg') }}">
-              <span>Gambar</span>
-            </div>
-            <div class="thumb--square">
-              <img src="{{ URL::asset('img/header.jpg') }}">
-              <span>Gambar</span>
-            </div>
+
+          @endfor
+
         </div>
 
         {{-- Form Tambah Header --}}
@@ -53,5 +42,33 @@
 
     </div>
 
+    <div class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <strong>Konfirmasi Penghapusan Gambar</strong><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+        </div>
+        <div class="modal-body">
+            Apakah anda yakin menghapus Gambar id-<span id="id"></span>?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info" data-dismiss="modal">Tidak</button>
+          <button type="button" class="btn btn-danger">Ya</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    @endsection
 
-@endsection
+@push('javascript')
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.delete').click(function() {
+          var id = $(this).data('id');
+          var data = $(this).data('id');
+          $('#id').text(data)
+          $('.modal').modal();
+        });
+      });
+    </script>
+@endpush

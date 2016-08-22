@@ -81,9 +81,13 @@ Route::group(['prefix' => 'admin', 'as' => 'admin'], function () {
       return View::make('admin.postberita');
     })->name('beritapost');
 
-    Route::get('berita/edit', function ()    {
+    Route::get('berita/edit/{id}', function ()    {
       return View::make('admin.editberita');
     })->name('beritaedit');
+
+    Route::get('pengumuman/edit/{id}', function ()    {
+      return View::make('admin.editpengumuman');
+    })->name('pengumumanedit');
 
     Route::post('berita/post', function ()    {
     })->name('kirim');

@@ -48,7 +48,7 @@
             <td>
               <div class="btn-group" role="group" aria-label="...">
                 <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-eye-open"></span></button>
-                <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span></button>
+                <a href="{{ URL::route('adminberitaedit', ['id' => 1]) }}" type="button" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span></a>
                 <button type="button" class="btn btn-danger delete" data-id="1"><span class="glyphicon glyphicon-trash"></span></button>
               </div>
             </td>

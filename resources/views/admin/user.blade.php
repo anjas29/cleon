@@ -5,7 +5,7 @@
     <div class="title-page">
       <a href="#" id="addnew" data-toggle="modal" data-target="#formmodal" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Add New User</a>
     </div>
-    
+
     <div class="box box-blue-jeans-light">
       <div class="box-header">
         <i class="fa fa-user"></i> User List
@@ -24,7 +24,9 @@
             <td>Administrator Jeemen</td>
             <td>jeemen</td>
             <td>jeemen@mail.com</td>
-            <td><a href="#" class="btn btn-success"><i class="fa fa-pencil"></i></a><a href="#" class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
+            <td>
+              <button data-id="1" class="delete btn btn-danger"><i class="fa fa-trash"></i></button>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -32,7 +34,8 @@
 
   </div>
 
-  <div class="modal fade" id="formmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  {{--  Modal add User--}}
+  <div class="modal fade" id="formmodal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -55,12 +58,36 @@
       </div>
     </div>
   </div>
+
+  {{-- Modal Edit User --}}
+
+  {{--  Modal Konfirmasi Hapus User --}}
+  <div id="hapusmodal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <strong>Konfirmasi Penghapusan FAQ</strong><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+        </div>
+        <div class="modal-body">
+            Apakah anda yakin menghapus pertanyaan id-<span id="id"></span>?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info" data-dismiss="modal">Tidak</button>
+          <button type="button" class="btn btn-danger">Ya</button>
+        </div>
+      </div>
+    </div>
+  </div>
 @endsection
 
 @push('javascript')
   <script type="text/javascript">
     $(document).ready(function() {
-
+      $('.delete').click(function(event) {
+        var id = $(this).data('id');
+        $('#id').text(id);
+        $('#hapusmodal').modal();
+      });
     });
   </script>
 @endpush
