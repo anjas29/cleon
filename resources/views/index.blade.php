@@ -7,6 +7,8 @@
 @push('css')
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/unslider/2.0.3/css/unslider-dots.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/unslider/2.0.3/css/unslider.css" media="screen" title="no title" charset="utf-8">
 @endpush
 @section('content')
 
@@ -15,7 +17,13 @@
 
   <div class="container">
     <div class="row">
-      <img src="{{ URL::asset('img/header.jpg') }}" class="img-responsive" alt="" />
+      <div class="banner">
+          <ul>
+            <li><img class="img-responsive" src="{{ URL::asset('img/header.jpg') }}" alt="" /></li>
+            <li><img class="img-responsive" src="{{ URL::asset('img/header.jpg') }}" alt="" /></li>
+            <li><img class="img-responsive" src="{{ URL::asset('img/header.jpg') }}" alt="" /></li>
+           </ul>
+      </div>
 
       </div>
     </div>
@@ -117,6 +125,7 @@
 @endsection
 
 @push('javascript')
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/unslider/2.0.3/js/unslider-min.js" charset="utf-8"></script>
   <script type="text/javascript">
     $(document).ready(function() {
       $('#fling').addClass('animate-out');
@@ -130,6 +139,10 @@
         $('#fling').addClass('animate-in');
       });
       $('#fling').tooltip();
+      $('.banner').unslider({
+        autoplay:true
+        // arrows: false
+      });
     });
   </script>
 @endpush
